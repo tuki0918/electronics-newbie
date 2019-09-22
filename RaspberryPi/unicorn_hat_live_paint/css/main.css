@@ -1,0 +1,21 @@
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+canvas {
+  margin: 10px;
+  border: 1px solid #ccc;
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+.canvas-wrapper canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
