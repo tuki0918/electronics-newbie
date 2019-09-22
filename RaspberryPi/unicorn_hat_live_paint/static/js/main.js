@@ -65,7 +65,7 @@ if (canvasPalet.getContext) {
         setTimeout(() => {
             ctx.clearRect(x * canvas_dot_size, y * canvas_dot_size, canvas_dot_size, canvas_dot_size);
             data[y][x] = 0;
-        }, 5 * 1000);
+        }, 3 * 1000);
 
     }, false);
 
