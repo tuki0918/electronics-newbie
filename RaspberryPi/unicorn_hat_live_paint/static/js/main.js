@@ -9,6 +9,20 @@ const data = (new Array(canvas_line)).fill(0).map(() => {
     return (new Array(canvas_line)).fill(0);
 });
 
+// server request
+setInterval(() => {
+    const method = 'POST';
+    const body = JSON.stringify(data);
+    const headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+    };
+    fetch('/paint', { method, headers, body })
+    .then((res)=> res.json())
+    .then(console.log)
+    .catch(console.error);
+}, 1 * 1000);
+
 // background canvas
 if (canvasBg.getContext) {
     canvasBg.width = canvas_size;
