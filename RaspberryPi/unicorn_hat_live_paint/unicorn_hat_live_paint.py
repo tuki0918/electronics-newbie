@@ -1,4 +1,5 @@
 import unicornhathd
+from random import randint
 from flask import Flask, request, jsonify, render_template
 app = Flask(__name__)
 
@@ -20,7 +21,8 @@ def paint():
                 else:
                     r, g, b = 0, 0, 0
                 unicornhathd.set_pixel(x, y, r, g, b)
-                unicornhathd.show()
+            # change flash timming
+            unicornhathd.show()
         return jsonify({'result': 0})
     except:
         unicornhathd.off()
